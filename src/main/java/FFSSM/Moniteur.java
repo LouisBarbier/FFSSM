@@ -4,15 +4,24 @@
 package FFSSM;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.TreeSet;
 
 public class Moniteur extends Plongeur {
 
     public int numeroDiplome;
 
-    public Moniteur(String numeroINSEE, String nom, String prenom, String adresse, String telephone, LocalDate naissance, int numeroDiplome) {
-        super(numeroINSEE, nom, prenom, adresse, telephone, naissance);
+    public ArrayList<Embauche> embauches = new ArrayList<Embauche>();
+
+    public Moniteur(String numeroINSEE, String nom, String prenom, String adresse, String telephone, LocalDate naissance,int niveau, int numeroDiplome) {
+        super(numeroINSEE, nom, prenom, adresse, telephone, naissance,niveau);
+        this.numeroDiplome = numeroDiplome;
+    }
+
+    public Moniteur(String numeroINSEE, String nom, String prenom, String adresse, String telephone, LocalDate naissance,int niveau, int numeroDiplome, Licence licence) {
+        super(numeroINSEE, nom, prenom, adresse, telephone, naissance,niveau,licence);
         this.numeroDiplome = numeroDiplome;
     }
 
@@ -22,8 +31,11 @@ public class Moniteur extends Plongeur {
      * @return l'employeur actuel de ce moniteur sous la forme d'un Optional
      */
     public Optional<Club> employeurActuel() {
-         // TODO: Implémenter cette méthode
-        throw new UnsupportedOperationException("Pas encore implémenté");
+        for (Embauche e : embauches){
+            if (e.estTerminee()==false){
+
+            }
+        }
     }
     
     /**
@@ -32,13 +44,11 @@ public class Moniteur extends Plongeur {
      * @param debutNouvelle la date de début de l'embauche
      */
     public void nouvelleEmbauche(Club employeur, LocalDate debutNouvelle) {   
-         // TODO: Implémenter cette méthode
-        throw new UnsupportedOperationException("Pas encore implémenté");	    
+         embauches.add(new Embauche(debutNouvelle,,employeur));
     }
 
     public List<Embauche> emplois() {
-         // TODO: Implémenter cette méthode
-        throw new UnsupportedOperationException("Pas encore implémenté");
+         return embauches;
     }
 
 }

@@ -3,6 +3,8 @@
  */
 package FFSSM;
 
+import com.sun.org.apache.xpath.internal.functions.FuncFalse;
+
 import java.time.LocalDate;
 
 public class Licence {
@@ -45,8 +47,8 @@ public class Licence {
      * @return vrai si valide à la date d
      **/
     public boolean estValide(LocalDate d) {
-         // TODO: Implémenter cette méthode
-        throw new UnsupportedOperationException("Pas encore implémenté");
+        if (delivrance.isAfter(d) || delivrance.plusYears(1).isBefore(d)) return false;
+        return true;
     }
 
 }
