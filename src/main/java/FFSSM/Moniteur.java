@@ -33,9 +33,10 @@ public class Moniteur extends Plongeur {
     public Optional<Club> employeurActuel() {
         for (Embauche e : embauches){
             if (e.estTerminee()==false){
-
+                return Optional.of(e.getEmployeur());
             }
         }
+        return Optional.empty();
     }
     
     /**
@@ -44,10 +45,10 @@ public class Moniteur extends Plongeur {
      * @param debutNouvelle la date de début de l'embauche
      */
     public void nouvelleEmbauche(Club employeur, LocalDate debutNouvelle) {   
-         embauches.add(new Embauche(debutNouvelle,,employeur));
+         embauches.add(new Embauche(debutNouvelle,this,employeur));
     }
 
-    public List<Embauche> emplois() {
+    public ArrayList<Embauche> emplois() {
          return embauches;
     }
 

@@ -35,10 +35,6 @@ public class Plongee {
 		participants.add(participant);
 	}
 
-	public LocalDate getDate() {
-		return date;
-	}
-
 	/**
 	 * Détermine si la plongée est conforme. 
 	 * Une plongée est conforme si tous les plongeurs de la palanquée ont une
@@ -47,7 +43,7 @@ public class Plongee {
 	 */
 	public boolean estConforme() {
 		for (Plongeur p : participants){
-			if (p.getLicence().estValide(date)==false){
+			if (!p.getLicence().estValide(date)){
 				return false;
 			}
 		}

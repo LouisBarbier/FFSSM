@@ -3,8 +3,6 @@
  */
 package FFSSM;
 
-import com.sun.org.apache.xpath.internal.functions.FuncFalse;
-
 import java.time.LocalDate;
 
 public class Licence {
@@ -22,22 +20,6 @@ public class Licence {
         this.numero = numero;
         this.delivrance = delivrance;
         this.club = club;
-    }
-
-    public Personne getPossesseur() {
-        return possesseur;
-    }
-
-    public String getNumero() {
-        return numero;
-    }
-
-    public LocalDate getDelivrance() {
-        return delivrance;
-    }
-
-    public Club getClub() {
-        return club;
     }
 
     /**

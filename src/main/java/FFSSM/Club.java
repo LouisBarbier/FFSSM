@@ -32,8 +32,8 @@ public class Club {
      * valide à la date de la plongée
      * @return l'ensemble des plongées non conformes
      */
-    public ArrayList<Plongee> plongeesNonConformes() {
-        ArrayList<Plongee> plongeesNonConform = new ArrayList<Plongee>();
+    public Set<Plongee> plongeesNonConformes() {
+        HashSet<Plongee> plongeesNonConform = new HashSet<Plongee>();
         for (Plongee p : plongees){
             if (p.estConforme()==false) {
                 plongeesNonConform.add(p);
@@ -49,43 +49,4 @@ public class Club {
     public void organisePlongee(Plongee p) {
          plongees.add(p);
     }
-    
-    
-    public Moniteur getPresident() {
-        return president;
-    }
-
-    public void setPresident(Moniteur président) {
-        this.president = président;
-    }
-
-    public String getNom() {
-        return nom;
-    }
-
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-
-    public String getAdresse() {
-        return adresse;
-    }
-
-    public void setAdresse(String adresse) {
-        this.adresse = adresse;
-    }
-
-    public String getTelephone() {
-        return telephone;
-    }
-
-    public void setTelephone(String telephone) {
-        this.telephone = telephone;
-    }
-
-    @Override
-    public String toString() {
-        return "Club{" + "président=" + president + ", nom=" + nom + ", adresse=" + adresse + ", telephone=" + telephone + '}';
-    }
-
 }
