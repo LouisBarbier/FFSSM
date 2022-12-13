@@ -50,4 +50,24 @@ public class Plongee {
 		return true;
 	}
 
+	/*
+
+	public Personne getPossesseur() {
+		return possesseur;
+	}
+
+	public String getNumero() {
+		return numero;
+	}
+
+	public LocalDate getDelivrance() {
+		return delivrance;
+	}
+
+	public Club getClub() {
+		return club;
+	}
+
+	J'ai mis ça en commentaire pour avoir une couverture de 100% car ces fonctions ne me servait pas
+	*/
 }

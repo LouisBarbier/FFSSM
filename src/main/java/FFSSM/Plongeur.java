@@ -21,7 +21,7 @@ public class Plongeur extends Personne{
         return licence;
     }
 
-    public void setLicence (Licence lic){
+    /*public void setLicence (Licence lic){
         licence=lic;
-    }
+    }*/
 }

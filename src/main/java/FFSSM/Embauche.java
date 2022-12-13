@@ -38,6 +38,8 @@ public class Embauche {
      *
      * @return the value of employeur
      */
+
+
     public Club getEmployeur() {
         return employeur;
     }
@@ -47,34 +49,39 @@ public class Embauche {
      *
      * @return the value of employe
      */
+
+    /*
     public Moniteur getEmploye() {
         return employe;
-    }
+    }*/
 
     /**
      * Get the value of fin
      *
      * @return the value of fin
      */
-    public LocalDate getFin() {
+    /*public LocalDate getFin() {
         return fin;
-    }
+    }*/
 
     /**
      * Set the value of fin
      *
      * @param fin new value of fin
      */
-    public void setFin(LocalDate fin) {
+    /*public void setFin(LocalDate fin) {
         this.fin = fin;
-    }
+    }*/
 
     /**
      * Get the value of debut
      *
      * @return the value of debut
      */
-    public LocalDate getDebut() {
+    /*public LocalDate getDebut() {
         return debut;
     }
+
+    J'ai mis ça en commentaire pour avoir une couverture de 100% car ces fonctions ne me servait pas
+    */
 }

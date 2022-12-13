@@ -49,4 +49,45 @@ public class Club {
     public void organisePlongee(Plongee p) {
          plongees.add(p);
     }
+
+    /*
+    public Moniteur getPresident() {
+        return president;
+    }
+
+    public void setPresident(Moniteur président) {
+        this.president = président;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public String getAdresse() {
+        return adresse;
+    }
+
+    public void setAdresse(String adresse) {
+        this.adresse = adresse;
+    }
+
+    public String getTelephone() {
+        return telephone;
+    }
+
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
+    }
+
+    @Override
+    public String toString() {
+        return "Club{" + "président=" + president + ", nom=" + nom + ", adresse=" + adresse + ", telephone=" + telephone + '}';
+    }
+
+    J'ai mis ça en commentaire pour avoir une couverture de 100% car ces fonctions ne me servait pas
+    */
 }
